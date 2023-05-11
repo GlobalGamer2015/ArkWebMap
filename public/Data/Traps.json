@@ -1,0 +1,14 @@
+{ 
+  "Aberration": [],
+  "CrystalIsles": [],
+  "Extinction": [],
+  "Fjordur": [],
+  "Genesis": [],
+  "Genesis2": [{ "NAME": "Giga Trap", "LAT": 78, "LONG": 62 }, { "NAME": "Giga Trap", "LAT": 77.68, "LONG": 92.04 }, { "NAME": "Giga Trap", "LAT": 70.44, "LONG": 60.57 }],
+  "LostIsland": [],
+  "Ragnarok": [],
+  "ScorchedEarth": [],
+  "TheCenter": [],
+  "TheIsland": [],
+  "Valguero": []
+}

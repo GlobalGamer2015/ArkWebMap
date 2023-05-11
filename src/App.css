@@ -1,0 +1,629 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+div.digital-ocean.leaflet-control {
+  left: 40%;
+}
+img#DOPoweredByBadge {
+  width: 40%;
+}
+
+span#version {
+  position: relative;
+  top: 95%;
+  left: 40%;
+  color: white;
+}
+a#version {
+  color: white;
+  text-decoration: none;
+}
+body {
+  overflow: hidden;
+}
+
+@import url("~leaflet/dist/leaflet.css");
+#scroller { position: absolute; overflow: auto; height: 100%; width: 100%; }
+#map { z-index: 0; width: 100vw; height: 100vh; overflow: hidden; margin: 0 auto; background: transparent; }
+.leaflet-container {
+  width: 100%; 
+  height: 100vh;
+}
+
+#map > div.leaflet-control-container > div.leaflet-bottom.leaflet-left > div { 
+  font-size: 16px;
+  color: white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  background-color: black;
+  padding: 5px;
+}
+
+.map-legend {
+  font-size: 16px;
+  color: white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  background-color: black;
+  padding: 10px;
+  text-align: left;
+  overflow-y: scroll;
+  height: 400px;
+}
+
+div#map-legend-item-marker-RedObelisk {
+  display: flex;
+  padding-top: 10px;
+}
+div#map-legend-item-marker-BlueObelisk {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-GreenObelisk {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-Terminal {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-CityTerminal {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-RockwellPrimeTerminal {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-MissionDispatcher {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-LootCrate {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-CaveLootCrate {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-DungeonLootCrate {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-DesertLootCrate {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-OrbitalSupplyDrop {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-GasVein {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-ElementVein {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-WyvernNest {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-IceWyvernNest {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-MagmasaurNest {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-RockDrakeNest {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-DeinonychusNest {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-HyperchargeNode {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-ChargeNode {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-Rune {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-Notes {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-Glitch {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-Dossier {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-PointOfInterest {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-UnderwaterDome {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-Artifact {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-BeaverDam {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-Shipwreck {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-CaveEntrance {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-PlantSpeciesZ {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-Home {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-Trap {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-Bed {
+  display: flex;
+  padding-top: 2px;
+}
+div#map-legend-item-marker-Player {
+  display: flex;
+}
+
+span#map-legend-marker-text\ map-legend-marker-text-RedObelisk {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-BlueObelisk {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-GreenObelisk {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-Terminal {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-CityTerminal {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-RockwellPrimeTerminal {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-MissionDispatcher {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-LootCrate {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-CaveLootCrate {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-DungeonLootCrate {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-DesertLootCrate {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-DeepSeaLootCrate {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-OrbitalSupplyDrop {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-GasVein {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-ElementVein {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-WyvernNest {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-IceWyvernNest {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-MagmasaurNest {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-RockDrakeNest {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-DeinonychusNest {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-HyperchargeNode {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-ChargeNode {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-Rune {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-Notes {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-Glitch {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-Dossier {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-PointOfInterest {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-UnderwaterDome {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-Artifact {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-BeaverDam {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-Shipwreck {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-CaveEntrance {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-PlantSpeciesZ {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-Home {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-Trap {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-Bed {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+span#map-legend-marker-text\ map-legend-marker-text-Player {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
+
+#map-legend-marker-checkbox-RedObelisk {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-BlueObelisk {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-GreenObelisk {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-Terminal {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-CityTerminal {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-RockwellPrimeTerminal {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-MissionDispatcher {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-LootCrate {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-CaveLootCrate {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-DungeonLootCrate {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-DesertLootCrate {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-DeepSeaLootCrate {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-OrbitalSupplyDrop {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-GasVein {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-ElementVein {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-WyvernNest {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-IceWyvernNest {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-MagmasaurNest {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-RockDrakeNest {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-DeinonychusNest {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-HyperchargeNode {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-ChargeNode {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-Rune {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-Notes {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-Glitch {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-Dossier {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-PointOfInterest {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-UnderwaterDome {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-Artifact {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-BeaverDam {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-Shipwreck {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-CaveEntrance {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-PlantSpeciesZ {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-Home {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-Trap {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-Bed {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-Player {
+  position: relative;
+  top: -5px;
+}
+
+div.leaflet-popup.Genesis2Drops.leaflet-zoom-animated {
+  width: 533px;
+}
+
+body { background-color: black; }
+
+img.leaflet-marker-icon.CityTerminal.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.Artifact.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.LootCrate.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.CaveEntrance.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.CaveLootCrate.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.DungeonLootCrate.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.OrbitalSupplyDrop.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.DesertLootCrate.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.DeepSeaLootCrate.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.Rune.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.Notes.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.Glitch.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.Dossier.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.PointOfInterest.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.MissionDispatcher.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.HyperchargeNode.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.ChargeNode.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.PlantSpeciesZ.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
+img.leaflet-marker-icon.GasVein.leaflet-zoom-animated.leaflet-interactive {
+  display: none;
+}
