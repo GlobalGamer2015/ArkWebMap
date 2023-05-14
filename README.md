@@ -76,6 +76,7 @@ This project requires Ark Dedicated Servers to run on Windows Machines.
 - Home
 - Trap
 - Bed
+- Tek Teleporter
 - Player
 
 # How to use Ark Web Map App
@@ -121,6 +122,25 @@ Example:
 }
 ```
 
+### TekTeleporters.json
+Example:
+```
+{ 
+  "Aberration": [],
+  "CrystalIsles": [],
+  "Extinction": [],
+  "Fjordur": [],
+  "Genesis": [],
+  "Genesis2": [{ "NAME": "Tek Teleporter", "LAT": 10, "LONG": 10 }],
+  "LostIsland": [],
+  "Ragnarok": [],
+  "ScorchedEarth": [],
+  "TheCenter": [],
+  "TheIsland": [],
+  "Valguero": []
+}
+```
+
 ### Beds.json
 
 Example:
@@ -151,6 +171,7 @@ export var ShowPlayers = true;
 export var ShowBases = true;
 export var ShowTraps = true;
 export var ShowBeds = true;
+export var ShowTekTeleporters = true;
 export var ActiveServers = [ 'Aberration', 'Extinction', 'Fjordur', 'Genesis2', 'LostIsland', 'ScorchedEarth', 'TheIsland' ];
 ```
 

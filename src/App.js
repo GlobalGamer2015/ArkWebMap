@@ -9,6 +9,7 @@ import * as Players from './Data/Players/Players';
 import * as Bases from './Data/Bases/Bases';
 import * as Traps from './Data/Traps/Traps';
 import * as Beds from './Data/Beds/Beds';
+import * as TekTeleporters from './Data/TekTeleporters/TekTeleporters';
 
 // import * as Version from './Data/Version';
 
@@ -49,6 +50,10 @@ function App() {
 
     if (Config.ShowBeds === true) {
       Beds.getBeds(map, allMarkers, allMarkersCount);
+    }
+
+    if (Config.ShowTekTeleporters === true) {
+      TekTeleporters.getTekTeleporters(map, allMarkers, allMarkersCount);
     }
 
     if (Config.ShowPlayers === true) {
@@ -210,6 +215,7 @@ function App() {
         [ 'Home', 'Home', 'Home' ],
         [ 'Trap', 'Trap', 'Trap' ],
         [ 'Bed', 'SimpleBed', 'Bed' ],
+        [ 'Tek Teleporter', 'TekTeleporter', 'TekTeleporter'],
         [ 'Player', 'Implant', 'Player' ]
       ];
 

@@ -5,4 +5,5 @@ export var ShowPlayers = true;
 export var ShowBases = true;
 export var ShowTraps = true;
 export var ShowBeds = true;
+export var ShowTekTeleporters = true;
 export var ActiveServers = [ 'Aberration', 'Extinction', 'Fjordur', 'Genesis2', 'LostIsland', 'ScorchedEarth', 'TheIsland' ];

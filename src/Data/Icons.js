@@ -279,3 +279,10 @@ export var BedIcon = L.icon({
   popupAnchor: [0, 0],
   iconUrl: '/Markers/SimpleBed.png'
 })
+export var TekTeleporterIcon = L.icon({
+  className: 'TekTeleporter',
+  iconSize: [15, 15],
+  iconAnchor: [0, 0],
+  popupAnchor: [0, 0],
+  iconUrl: '/Markers/TekTeleporter.png'
+})

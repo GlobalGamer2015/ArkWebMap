@@ -225,6 +225,10 @@ div#map-legend-item-marker-Bed {
   display: flex;
   padding-top: 2px;
 }
+div#map-legend-item-marker-TekTeleporter {
+  display: flex;
+  padding-top: 2px;
+}
 div#map-legend-item-marker-Player {
   display: flex;
 }
@@ -409,6 +413,11 @@ span#map-legend-marker-text\ map-legend-marker-text-Bed {
   top: -5px;
   padding: 4px;
 }
+span#map-legend-marker-text\ map-legend-marker-text-TekTeleporter {
+  position: relative;
+  top: -5px;
+  padding: 4px;
+}
 span#map-legend-marker-text\ map-legend-marker-text-Player {
   position: relative;
   top: -5px;
@@ -556,6 +565,10 @@ span#map-legend-marker-text\ map-legend-marker-text-Player {
   top: -5px;
 }
 #map-legend-marker-checkbox-Bed {
+  position: relative;
+  top: -5px;
+}
+#map-legend-marker-checkbox-TekTeleporter {
   position: relative;
   top: -5px;
 }
