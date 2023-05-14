@@ -20,7 +20,7 @@ This project requires Ark Dedicated Servers to run on Windows Machines.
 - Ark Web Map API, if showing Players on Map: [Click here](https://github.com/GlobalGamer2015/ArkWebMapApi)
 
 ## Features
-- Players - Coordinates are updated every 60 seconds.
+- Players - Coordinates are updated every 30 seconds.
 
 ### Maps
 - Aberration
