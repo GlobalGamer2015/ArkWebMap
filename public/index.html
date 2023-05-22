@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
     <title>Ark Web Map</title>
   </head>
   <body onload="HideCertainMarkers();">
@@ -34,33 +35,36 @@
     <div id="root"></div>
     <script>
       function HideCertainMarkers() {
-        var hide = [
-          "CityTerminal",
-          "Artifact",
-          "LootCrate",
-          "CaveEntrance",
-          "CaveLootCrate",
-          "DungeonLootCrate",
-          "OrbitalSupplyDrop",
-          "DesertLootCrate",
-          "DeepSeaLootCrate",
-          "Rune",
-          "Notes",
-          "Glitch",
-          "Dossier",
-          "PointOfInterest",
-          "MissionDispatcher",
-          "HyperchargeNode",
-          "ChargeNode",
-          "PlantSpeciesZ",
-          "GasVein",
-        ];
-        hide.forEach((_hide) => {
-          document.getElementById(
-            `map-legend-marker-checkbox-${_hide}`
-          ).checked = false;
-          //$(`img.leaflet-marker-icon.${_hide}.leaflet-zoom-animated.leaflet-interactive`).toggle();
-        });
+        var MD = new MobileDetect(window.navigator.userAgent);
+        if (!MD.phone()) {
+          var hide = [
+            "CityTerminal",
+            "Artifact",
+            "LootCrate",
+            "CaveEntrance",
+            "CaveLootCrate",
+            "DungeonLootCrate",
+            "OrbitalSupplyDrop",
+            "DesertLootCrate",
+            "DeepSeaLootCrate",
+            "Rune",
+            "Notes",
+            "Glitch",
+            "Dossier",
+            "PointOfInterest",
+            "MissionDispatcher",
+            "HyperchargeNode",
+            "ChargeNode",
+            "PlantSpeciesZ",
+            "GasVein",
+          ];
+          hide.forEach((_hide) => {
+            document.getElementById(
+              `map-legend-marker-checkbox-${_hide}`
+            ).checked = false;
+            //$(`img.leaflet-marker-icon.${_hide}.leaflet-zoom-animated.leaflet-interactive`).toggle();
+          });
+        }
       }
     </script>
   </body>
